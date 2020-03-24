@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:transparent_image/transparent_image.dart';
 
+import 'package:flashcards/theme.dart' as Theme;
+
 class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,10 @@ class HomeTab extends StatelessWidget {
               backgroundColor: Colors.transparent,
               elevation: 0.0,
               flexibleSpace: FlexibleSpaceBar(
-                title: const Text("Novidades"),
+                title: const Text(
+                    "Flash Cards",
+                    style: Theme.TextStyles.appBarHeader,
+                ),
                 centerTitle: true,
               ),
             ),
@@ -41,9 +46,9 @@ class HomeTab extends StatelessWidget {
                     child: Container(
                       height: 200.0,
                       alignment: Alignment.center,
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                      ),
+//                      child: CircularProgressIndicator(
+//                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+//                      ),
                     ),
                   );
                 else {
